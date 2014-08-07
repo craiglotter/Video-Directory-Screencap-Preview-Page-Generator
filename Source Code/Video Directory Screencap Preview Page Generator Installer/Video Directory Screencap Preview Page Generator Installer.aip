@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<DOCUMENT type="Advanced Installer" version="1.9" modules="professional" RootPath=".">
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiPropsComponent">
+    <ROW Property="CTRLS" Value="3"/>
+    <ROW Property="ProductName" Value="Video Directory Screencap Preview Page Generator"/>
+    <ROW Property="ALLUSERS" Value="2"/>
+    <ROW Property="BannerBitmap" Value="installer_background.jpg"/>
+    <ROW Property="ProductVersion" Value="1.0.0"/>
+    <ROW Property="SecureCustomProperties" Value="OLDPRODUCTS;AI_NEWERPRODUCTFOUND"/>
+    <ROW Property="UpgradeCode" Value="{EF189F46-2739-4750-BFF3-A018262BB64B}"/>
+    <ROW Property="ProductCode" Value="{5AB8FC83-4F44-4B2E-8950-88343C23F68B}"/>
+    <ROW Property="ARPPRODUCTICON" Value="controlPanelIcon.exe"/>
+    <ROW Property="DialogBitmap" Value="installer_background_dialog.jpg"/>
+    <ROW Property="Manufacturer" Value="Craig Lotter"/>
+    <ROW Property="ProductLanguage" Value="1033"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiDirsComponent">
+    <ROW Directory="Inputs_DIR" Directory_Parent="TARGETDIR" DefaultDir="Inputs"/>
+    <ROW Directory="SHORTCUTDIR" Directory_Parent="TARGETDIR" DefaultDir="SHORTC~1|SHORTCUTDIR" IsPseudoRoot="1"/>
+    <ROW Directory="TARGETDIR" Directory_Parent="" DefaultDir="SourceDir"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiCompsComponent">
+    <ROW Component="Application_Loader.exe" ComponentId="{1505BEAD-1621-4FA1-ABF5-AB999B28682A}" Directory_="TARGETDIR" Attributes="0" Condition="" KeyPath="Application_Loader.exe" FullKeyPath="TARGETDIR\Application_Loader.exe"/>
+    <ROW Component="Interop.WMPLib.dll" ComponentId="{7D0A2A86-A5DE-474D-9884-F63B1AB13D4C}" Directory_="TARGETDIR" Attributes="0" Condition="" KeyPath="Interop.WMPLib.dll" FullKeyPath="TARGETDIR\Interop.WMPLib.dll"/>
+    <ROW Component="SnatchIt.exe" ComponentId="{F500AA81-2512-4677-A1FB-492C7456F4B5}" Directory_="TARGETDIR" Attributes="0" Condition="" KeyPath="SnatchIt.exe" FullKeyPath="TARGETDIR\SnatchIt.exe"/>
+    <ROW Component="config.ini" ComponentId="{54046834-3B81-413B-ACFE-7DD2267AA148}" Directory_="TARGETDIR" Attributes="0" Condition="" KeyPath="config.ini" FullKeyPath="TARGETDIR"/>
+    <ROW Component="AxInterop.WMPLib.dll" ComponentId="{832BB08D-41AB-4E47-B228-37125498E49E}" Directory_="TARGETDIR" Attributes="0" Condition="" KeyPath="AxInterop.WMPLib.dll" FullKeyPath="TARGETDIR\AxInterop.WMPLib.dll"/>
+    <ROW Component="Inputs.txt" ComponentId="{92CAFB60-2615-465E-AF0A-F8B198AA6E6A}" Directory_="Inputs_DIR" Attributes="0" Condition="" KeyPath="Inputs.txt" FullKeyPath="TARGETDIR\Inputs"/>
+    <ROW Component="Menu.exe" ComponentId="{ECB1782D-410C-4EC7-8291-1846C5964370}" Directory_="TARGETDIR" Attributes="0" Condition="" KeyPath="Menu.exe" FullKeyPath="TARGETDIR\Menu.exe"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiFeatsComponent">
+    <ROW Feature="MainFeature" Feature_Parent="" Title="MainFeature" Description="Description" Display="2" Level="1" Directory_="TARGETDIR" Attributes="0" Components="Application_Loader.exe AxInterop.WMPLib.dll config.ini Inputs.txt Interop.WMPLib.dll Menu.exe SnatchIt.exe"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiFilesComponent">
+    <ROW File="Interop.WMPLib.dll" Component_="Interop.WMPLib.dll" FileName="Intero~1.dll|Interop.WMPLib.dll" Version="" Language="" Attributes="" SourcePath="..\Video Directory Screencap Preview Page Generator\Required Files\Interop.WMPLib.dll" SelfReg="false"/>
+    <ROW File="SnatchIt.ini" Component_="config.ini" FileName="SnatchIt.ini" Version="" Language="" Attributes="" SourcePath="..\Video Directory Screencap Preview Page Generator\Required Files\SnatchIt.ini" SelfReg="false"/>
+    <ROW File="Splash_Image.jpg" Component_="Inputs.txt" FileName="Splash~1.jpg|Splash_Image.jpg" Version="" Language="" Attributes="" SourcePath="..\Video Directory Screencap Preview Page Generator\Required Files\Inputs\Splash_Image.jpg" SelfReg="false"/>
+    <ROW File="config.ini" Component_="config.ini" FileName="config.ini" Version="" Language="" Attributes="" SourcePath="..\Video Directory Screencap Preview Page Generator\Required Files\config.ini" SelfReg="false"/>
+    <ROW File="AxInterop.WMPLib.dll" Component_="AxInterop.WMPLib.dll" FileName="AxInte~1.dll|AxInterop.WMPLib.dll" Version="" Language="" Attributes="" SourcePath="..\Video Directory Screencap Preview Page Generator\Required Files\AxInterop.WMPLib.dll" SelfReg="false"/>
+    <ROW File="Inputs.txt" Component_="Inputs.txt" FileName="Inputs.txt" Version="" Language="" Attributes="" SourcePath="..\Video Directory Screencap Preview Page Generator\Required Files\Inputs\Inputs.txt" SelfReg="false"/>
+    <ROW File="Menu.exe" Component_="Menu.exe" FileName="Menu.exe" Version="" Language="" Attributes="" SourcePath="..\Video Directory Screencap Preview Page Generator\Required Files\Menu.exe" SelfReg="false"/>
+    <ROW File="Application_Loader.exe" Component_="Application_Loader.exe" FileName="Applic~1.exe|Application_Loader.exe" Version="" Language="" Attributes="" SourcePath="..\Video Directory Screencap Preview Page Generator\Required Files\Application_Loader.exe" SelfReg="false"/>
+    <ROW File="Description.txt" Component_="config.ini" FileName="Descri~1.txt|Description.txt" Version="" Language="" Attributes="" SourcePath="..\Video Directory Screencap Preview Page Generator\Required Files\Description.txt" SelfReg="false"/>
+    <ROW File="SnatchIt.exe" Component_="SnatchIt.exe" FileName="SnatchIt.exe" Version="" Language="" Attributes="" SourcePath="..\Video Directory Screencap Preview Page Generator\Required Files\SnatchIt.exe" SelfReg="false"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiCustActComponent">
+    <ROW Action="AI_DOWNGRADE" Type="19" Source="" Target="A higher version of [ProductName] is installed."/>
+    <ROW Action="AI_ViewReadme" Type="194" Source="viewer.exe" Target="[#Description.txt]"/>
+    <ROW Action="SET_SHORTCUTDIR" Type="307" Source="SHORTCUTDIR" Target="[ProgramMenuFolder][ProductName]"/>
+    <ROW Action="AI_LaunchApp" Type="194" Source="viewer.exe" Target="[#Application_Loader.exe]"/>
+    <ROW Action="SET_TARGETDIR" Type="307" Source="TARGETDIR" Target="[ProgramFilesFolder]\[ProductName]"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiUpgradeComponent">
+    <ROW UpgradeCode="UpgradeCode" VersionMin="" VersionMax="ProductVersion" Language="" Attributes="1025" Remove=""/>
+    <ROW UpgradeCode="UpgradeCode" VersionMin="ProductVersion" VersionMax="" Language="" Attributes="2" Remove=""/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiMergeModsComponent">
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiShortsComponent">
+    <ROW Shortcut="Uninstall_Video_Menu" Directory_="SHORTCUTDIR" Name="Uninst~1|Uninstall Video Menu" Component_="Application_Loader.exe" Target="[SystemFolder]msiexec.exe" Arguments="/x [ProductCode]" Description="" Hotkey="0" Icon_="SystemFolder_msiexec.exe" IconIndex="0" ShowCmd="1" WkDir=""/>
+    <ROW Shortcut="Video_Menu" Directory_="SHORTCUTDIR" Name="VideoM~1|Video Menu" Component_="Application_Loader.exe" Target="[TARGETDIR]Application_Loader.exe" Arguments="" Description="" Hotkey="0" Icon_="controlPanelIcon.exe" IconIndex="0" ShowCmd="1" WkDir=""/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiIconsComponent">
+    <ROW Name="SystemFolder_msiexec.exe" SourcePath="&lt;uninstall.ico&gt;" Index="0"/>
+    <ROW Name="controlPanelIcon.exe" SourcePath="Images\Application_Icon.ico" Index="0"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiInstExSeqComponent">
+    <ROW Action="AI_DOWNGRADE" Condition="AI_NEWERPRODUCTFOUND AND (UILevel &lt;&gt; 5)" Sequence="210"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiBinaryComponent">
+    <ROW Name="installer_background.jpg" SourcePath="Images\installer_background.jpg"/>
+    <ROW Name="installer_background_dialog.jpg" SourcePath="Images\installer_background_dialog.jpg"/>
+    <ROW Name="viewer.exe" SourcePath="&lt;viewer.exe&gt;"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiInstallUISequenceComponent">
+    <ATTRIBUTE name="Start" value="WelcomeDlg FolderDlg VerifyReadyDlg"/>
+    <ATTRIBUTE name="Progress" value="ProgressDlg"/>
+    <ATTRIBUTE name="End" value="ExitDialog"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.PreReqComponent">
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiMediaComponent">
+    <ATTRIBUTE name="InstallationType" value="1"/>
+    <ATTRIBUTE name="MediaSize" value="0"/>
+    <ATTRIBUTE name="Compress" value="1"/>
+    <ATTRIBUTE name="Package" value="10"/>
+    <ATTRIBUTE name="PackageName" value="Release\Video Directory Screencap Preview Page Generator Installer"/>
+    <ATTRIBUTE name="IconPath" value="Images\Application_Icon.ico?0"/>
+  </COMPONENT>
+</DOCUMENT>
